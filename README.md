@@ -33,7 +33,7 @@ The repository includes all code, datasets, and resources required to reproduce 
 ├── src/
 │   ├── generation/                 # Corpus generation and validation
 │   ├── face_act_classification/    # Face Act Classification (FAC)
-│   └── politeness_regression/      # Overall Politeness Regression (OPR)
+│   └── overall_politeness_regression/      # Overall Politeness Regression (OPR)
 │
 ├── README.md
 ├── requirements.txt
