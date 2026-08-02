@@ -1,0 +1,309 @@
+id,covered_text,GoldFaceAct,seed,email_id,pair_idx,is_request,sentence_idx
+351,"As discussed, we expect a comprehensive update on the Japan project, focusing on the Tokyo office's progress and any interactions with Japanese partners.",HNeg-,9,81,1.0,1,0
+352,"Your role in this initiative, despite being stationed in Sydney, requires precise and timely reporting on developments.",HNeg-,9,81,1.0,1,1
+353,"Furthermore, we need you to elevate the quality of these weekly updates significantly.","HPos-, HNeg-",9,81,1.0,1,2
+354,It's crucial you address the current inadequacies regarding consistency and insight.,HNeg-,9,81,1.0,1,3
+355,"The Japan team is not here to guide you at every step, so I trust you'll process this independently.",HPos-,9,81,1.0,1,4
+356,"Looking forward to your response and, more importantly, results.",HNeg-,9,81,1.0,1,5
+357,I understand the importance of thorough reporting and will take the necessary steps to meet your expectations.,SNeg-,9,82,1.0,0,0
+358,I will ensure the upcoming Japan office report covers any previous gaps.,SNeg-,9,82,1.0,0,1
+359,Please let me know if there are any specific areas you would like me to focus on in future updates.,HNeg+,9,82,1.0,0,2
+360,"As we discussed, we are looking forward to a detailed update on the Japan project.",HNeg+,9,83,2.0,1,0
+361,We are particularly interested in the Tokyo office's progress and any interactions with our Japanese partners.,HNeg+,9,83,2.0,1,1
+362,"Although you're based in Sydney, your role in this initiative is crucial, and your timely and thorough reports are much appreciated.",HPos+,9,83,2.0,1,2
+363,"We would appreciate it if you could enhance the quality of these updates, as there have been some inconsistencies regarding the detail and insight provided.","HPos-, HNeg+",9,83,2.0,1,3
+364,"While the Japan team may not be able to assist at every step, we trust you will manage the task independently.",HNeg+,9,83,2.0,1,4
+365,Looking forward to your response and results.,"HPos+, HNeg+",9,83,2.0,1,5
+366,I appreciate your feedback.,HPos+,9,84,2.0,0,0
+367,I recognize the vital role of comprehensive reporting and commit to making necessary improvements.,SNeg-,9,84,2.0,0,1
+368,I'll ensure the upcoming Japan office report addresses any previous oversights.,SNeg-,9,84,2.0,0,2
+369,I'd be grateful if you could let me know if there are specific areas you'd prefer me to concentrate on moving forward.,HNeg+,9,84,2.0,0,3
+370,"As we previously discussed, we are eagerly anticipating a detailed update on the Japan project, including progress at the Tokyo office and interactions with Japanese partners.",HNeg-,9,85,3.0,1,0
+371,"Although stationed in Sydney, your contributions are invaluable, and your punctual and high-quality reports are always of great importance to us.",HPos+,9,85,3.0,1,1
+372,It would be helpful if you could elevate the standard of these reports to address some past inconsistencies in detail and insight.,HNeg+,9,85,3.0,1,2
+373,"While the Japan team may have limited ability to support every aspect, we have confidence in your ability to navigate this independently.","HPos+, HNeg-",9,85,3.0,1,3
+374,Thank you in advance for your efforts and looking forward to your forthcoming updates.,HPos+,9,85,3.0,1,4
+375,I truly appreciate your thoughtful feedback.,HPos+,9,86,3.0,0,0
+376,I understand the significance of delivering a well-rounded report and will strive to meet the expectations laid out.,SNeg-,9,86,3.0,0,1
+377,I'm committed to addressing any previous shortcomings and providing a thorough update in future reports.,SNeg-,9,86,3.0,0,2
+378,Please feel free to guide me on any specific areas of focus that would align with your vision.,HNeg+,9,86,3.0,0,3
+379,"In line with our conversation, we are looking forward to receiving a comprehensive update on the Japan project, specifically regarding the Tokyo office's advancements and collaborations with our Japanese partners.",HNeg+,9,87,4.0,1,0
+380,"Your role, despite being based in Sydney, is critical to our success, and your thorough and timely reports are highly valued.","HPos+, HNeg+",9,87,4.0,1,1
+381,Enhancing the quality of these updates will be greatly appreciated to address any existing discrepancies in detail and insight.,"HPos+, HNeg+",9,87,4.0,1,2
+382,"Although the Japan team may not be able to guide every step, we have complete faith in your capabilities to handle this adeptly.","HPos+, HNeg+",9,87,4.0,1,3
+383,Thank you for your dedication—and I'm eager to see your valuable insights in the upcoming reports.,"HPos+, HNeg+",9,87,4.0,1,4
+384,Thank you for your constructive feedback.,HPos+,9,88,4.0,0,0
+385,I'm aware of how crucial a detailed report is and will certainly take steps to enhance its quality.,SNeg-,9,88,4.0,0,1
+386,I'll endeavor to cover any gaps in the next Japan office report comprehensively.,SNeg-,9,88,4.0,0,2
+387,Kindly let me know if there are particular areas you would like me to prioritize to better align with your expectations.,HNeg+,9,88,4.0,0,3
+388,"As we discussed earlier, we are eagerly awaiting your detailed update on the Japan project.",HNeg+,9,89,5.0,1,0
+389,We're keen to hear about the Tokyo office's recent progress and any fruitful interactions with our partners in Japan.,HNeg+,9,89,5.0,1,1
+390,"While located in Sydney, your efforts are instrumental to our project’s ongoing success, and your insightful and prompt reports are greatly appreciated.",HPos+,9,89,5.0,1,2
+391,"If you could focus on elevating the standard of these updates, it would be invaluable in ensuring we overcome any previous inconsistencies in the details and insights provided.",HNeg+,9,89,5.0,1,3
+392,"Although our colleagues in Japan might not be available for every query, we are very confident in your ability to navigate this admirably.","HPos+, HNeg+",9,89,5.0,1,4
+393,"Thank you immensely for your dedication, and I'm excited to review your upcoming comprehensive updates.",HPos+,9,89,5.0,1,5
+394,I understand the importance of delivering a thorough update and assure you that steps will be taken to meet expectations.,SNeg-,9,90,5.0,0,0
+395,I'll ensure the upcoming Japan office report addresses any previous gaps.,SNeg-,9,90,5.0,0,1
+396,Please let me know if there are specific areas you would like me to prioritize in future updates.,HNeg+,9,90,5.0,0,2
+536,It has become apparent that your oversight in leveraging/executing SIC codes effectively has been hampering our operations within the metals and manufacturing sector.,HPos-,13,121,1.0,1,0
+537,"While others in the market are pushing boundaries in trading and exchange, your stagnation is glaring.",HPos-,13,121,1.0,1,1
+538,"Instead of embracing the challenges of market evolution and complexity, your approach seems geared towards maintaining mediocrity.",HPos-,13,121,1.0,1,2
+539,This negligence not only puts our commodity exchange dealings at risk but also questions your autonomy in leading decisive operations.,HPos-,13,121,1.0,1,3
+540,Reflect on whether you're truly adapting to the dynamics of modern markets or trapped in obsolete processes.,HNeg-,13,121,1.0,1,4
+541,I await your insights on revamping our strategies with improved precision.,HNeg-,13,121,1.0,1,5
+542,I find your email patronizing.,HPos-,13,122,1.0,0,0
+543,You're presuming incompetence without understanding the intricacies of our current operations.,HPos-,13,122,1.0,0,1
+544,"Instead of baseless critiques, I suggest you review how your directives contribute to these inefficiencies.","HPos-, HNeg-",13,122,1.0,0,2
+545,"Once you've sorted that out, we can talk.",HNeg-,13,122,1.0,0,3
+546,"I've noticed some challenges in effectively leveraging SIC codes, which seem to be affecting our operations in the metals and manufacturing sector.",HPos-,13,123,2.0,1,0
+547,"While others in the market are advancing, our strategies appear stagnant.",HPos-,13,123,2.0,1,1
+548,It may be worthwhile to consider whether our current approaches are aligned with the rapidly evolving market dynamics.,HNeg+,13,123,2.0,1,2
+549,"Our commodity exchange dealings could be at risk, and it's important to reflect on how we're leading operations.",HNeg-,13,123,2.0,1,3
+550,Are we truly adapting to modern market demands or sticking to outdated methods?,HPos-,13,123,2.0,1,4
+551,I'd appreciate your thoughts on how we could enhance our strategies for better precision.,HNeg+,13,123,2.0,1,5
+552,I understand your concerns but feel there might be a misunderstanding.,HPos-,13,124,2.0,0,0
+553,"The complexities we face require a careful review, and I believe that revisiting some strategic directions could help.",HNeg+,13,124,2.0,0,1
+554,"Once we've both reviewed these aspects more thoroughly, I'd be happy to discuss further.","HNeg+, SPos+",13,124,2.0,0,2
+555,I've realized there could be an opportunity to improve our use of SIC codes to enhance our operations in metals and manufacturing.,HNeg+,13,125,3.0,1,0
+556,"It seems other market players are exploring new frontiers in trading, and there may be value in reassessing our current strategies to ensure we are not left behind.",HNeg+,13,125,3.0,1,1
+557,I wonder if our current processes might benefit from modernization to sustain our commodity exchange success.,HNeg+,13,125,3.0,1,2
+558,"Your leadership is valuable, and any insights you could share on these challenges would be greatly appreciated.","HPos+, HNeg+",13,125,3.0,1,3
+559,Looking forward to your thoughts on how to refine our strategic approach.,HNeg+,13,125,3.0,1,4
+560,Your email seemed a bit harsh.,HPos-,13,126,3.0,0,0
+561,It might be helpful to consider the complexities involved in our current operations.,HNeg+,13,126,3.0,0,1
+562,"Instead of just critiquing, it could be beneficial to reassess how your directives align with these challenges.",HPos-,13,126,3.0,0,2
+563,"Once that's clarified, we can have a discussion.",HNeg-,13,126,3.0,0,3
+564,I see potential in further optimizing our utilization of SIC codes to boost our effectiveness in the metals and manufacturing sectors.,HNeg+,13,127,4.0,1,0
+565,"Many market peers are pushing forward, and I believe we have a wonderful opportunity to revisit our strategies to stay competitive.",HNeg+,13,127,4.0,1,1
+566,I respect your leadership and know how crucial your role is in navigating these complexities.,HPos+,13,127,4.0,1,2
+567,Any suggestions you have to contribute to enhancing our operations would be invaluable.,"HPos+, HNeg+",13,127,4.0,1,3
+568,Thank you in advance for considering these perspectives.,HPos+,13,127,4.0,1,4
+569,I look forward to your valuable input.,HNeg+,13,127,4.0,1,5
+570,Thank you for sharing your thoughts.,HPos+,13,128,4.0,0,0
+571,I appreciate your perspective and understand the need for adjustment.,"HPos+, SPos-",13,128,4.0,0,1
+572,Perhaps it would be beneficial to collaboratively explore how our strategies might be refined.,HNeg+,13,128,4.0,0,2
+573,I'll be delighted to discuss once we've had a chance to reevaluate our current directives.,HNeg+,13,128,4.0,0,3
+574,"I wanted to share some thoughts about the possibility of enhancing our implementation of SIC codes, which I believe could further fortify our metals and manufacturing operations.",HNeg+,13,129,5.0,1,0
+575,"As our industry peers continue to innovate, exploring these opportunities could be mutually beneficial for our team and the broader market landscape.",HNeg+,13,129,5.0,1,1
+576,Your expertise is incredibly valued and I am eager to hear any thoughts you might have on how we can collaboratively refine our approach.,"HPos+, HNeg+",13,129,5.0,1,2
+577,"Your leadership in these efforts is highly appreciated, and I'm grateful for your engagement in this process.",HPos+,13,129,5.0,1,3
+578,Thank you very much for considering my perspectives.,HPos+,13,129,5.0,1,4
+579,I am looking forward to the opportunity to work together on these initiatives.,HNeg+,13,129,5.0,1,5
+580,Thank you for your thoughtful approach.,HPos+,13,130,5.0,0,0
+581,I appreciate the opportunity to discuss our strategies and understand where improvements can be made.,"HPos+, SPos-",13,130,5.0,0,1
+582,Let's coordinate to ensure our strategies effectively reflect our shared goals.,HNeg+,13,130,5.0,0,2
+583,I'm eager to collaborate and find the best path forward together.,HPos+,13,130,5.0,0,3
+1074,Upon reviewing your resume submitted to doc@baylor.,Neutral,25,241,1.0,1,0
+1075,"edu, it's disappointing to note the superficial approach taken considering your educational background in finance.",HPos-,25,241,1.0,1,1
+1076,"While you have attempted to showcase experience, it's foreseeable that a more sophisticated audience may not share your perspective.",HPos-,25,241,1.0,1,2
+1077,"Additionally, your insistence on using basic HTML formatting detracts from the professional standard one expects from a candidate eyeing an interview in an academic institution like Baylor.",HPos-,25,241,1.0,1,3
+1078,Perhaps a more refined presentation could be beneficial.,HNeg+,25,241,1.0,1,4
+1079,Please consider scheduling a more engaging interview preparation.,HNeg+,25,241,1.0,1,5
+1080,"I appreciate your feedback, although it's disheartening that my efforts were not entirely appreciated.",HPos-,25,242,1.0,0,0
+1081,I look forward to our interview to better understand how we can address these issues within the environment at Baylor.,HPos+,25,242,1.0,0,1
+1082,After reviewing your resume submitted to doc@baylor.,Neutral,25,243,2.0,1,0
+1083,"edu, it seems there may be certain areas that could benefit from further elaboration considering your educational background in finance.",HPos-,25,243,2.0,1,1
+1084,"While you did make an effort to demonstrate your experience, some might find that a more sophisticated presentation would be better appreciated.","HPos-, HNeg+",25,243,2.0,1,2
+1085,"Additionally, using basic HTML formatting might not fully align with the professional standards we expect from candidates at Baylor.",HPos-,25,243,2.0,1,3
+1086,A more polished and cohesive format might serve you better.,HNeg+,25,243,2.0,1,4
+1087,Please consider arranging a preparation session for a more engaging interview experience.,HNeg+,25,243,2.0,1,5
+1088,Thank you so much for your invaluable insight and guidance.,HPos+,25,244,2.0,0,0
+1089,I am genuinely grateful for your thoughtful approach and am excited about the possibility of discussing these suggestions further during our interview.,HPos+,25,244,2.0,0,1
+1090,This discussion will surely enrich our mutual understanding of Baylor's professional environment.,HPos+,25,244,2.0,0,2
+1091,Thank you for submitting your resume to doc@baylor.,HPos+,25,245,3.0,1,0
+1092,"Upon reviewing it, I noticed there might be opportunities to further highlight your impressive educational background in finance.",HNeg+,25,245,3.0,1,1
+1093,"While your experience shines through, presenting it with a bit more sophistication could enhance its reception by our team.",HPos+,25,245,3.0,1,2
+1094,I'm also wondering if using basic HTML might not fully capture the professional standard we aim for at Baylor.,HNeg+,25,245,3.0,1,3
+1095,You might find a more refined layout advantageous.,HNeg+,25,245,3.0,1,4
+1096,Please let me know if you’d be interested in a session to help better prepare for an engaging interview.,SNeg-,25,245,3.0,1,5
+1097,"Thank you for your perspective, I find it challenging yet constructive.","HPos+, SNeg+",25,246,3.0,0,0
+1098,I am keen to engage in a conversation during the interview to better understand Baylor's standards.,SNeg-,25,246,3.0,0,1
+1099,I wanted to express my appreciation for your resume submission to doc@baylor.,HPos+,25,247,4.0,1,0
+1100,"After reviewing it, it seems there could be even more potential for highlighting your strong educational background in finance with some enhanced detail.",HNeg+,25,247,4.0,1,1
+1101,"Although your experience is clearly evident, some adjustments in its presentation might resonate more with our diverse audience here at Baylor.","HPos+, HNeg+",25,247,4.0,1,2
+1102,"Additionally, revisiting the basic HTML format could provide a more polished look that aligns with our standards.",HNeg+,25,247,4.0,1,3
+1103,I would be delighted to explore how we can support you in preparing for an exciting interview experience.,SNeg-,25,247,4.0,1,4
+1104,Your blatant dismissal of my efforts is troubling and unprofessional.,HPos-,25,248,4.0,0,0
+1105,"If this is the environment at Baylor, I look forward to discussing such misguided practices during the interview.",SNeg+,25,248,4.0,0,1
+1106,Thank you very much for submitting your resume to doc@baylor.,HPos+,25,249,5.0,1,0
+1107,"After going through it, I wanted to share some suggestions that might help highlight your commendable educational background in finance more effectively.",HNeg+,25,249,5.0,1,1
+1108,"Your experience stands out, and with a few enhancements in its presentation, it could make an even stronger impact.","HPos+, HNeg+",25,249,5.0,1,2
+1109,"Similarly, we believe that exploring alternatives to basic HTML formatting might bring your submission in line with our professional expectations at Baylor.",HNeg+,25,249,5.0,1,3
+1110,"We’re here to support you, and it would be a pleasure to assist with any preparations for an inspiring interview.",SNeg-,25,249,5.0,1,4
+1111,Please let me know how we can be of help.,SNeg-,25,249,5.0,1,5
+1112,I truly appreciate your thoughtful feedback and insight.,HPos+,25,250,5.0,0,0
+1113,I am committed to making the most of this opportunity and look forward to our discussion during the interview to further explore these ideas in the context of Baylor's expectations.,"HNeg+, SNeg-",25,250,5.0,0,1
+1114,I’ve reviewed your recent work concerning the project sequence.,Neutral,26,251,1.0,1,0
+1115,"Frankly, I’m puzzled by your decisions and the execution.",HPos-,26,251,1.0,1,1
+1116,"It appears that every change led to redundancy, showing a lack of the strategic foresight expected from a Senior Project Manager.",HPos-,26,251,1.0,1,2
+1117,You might want to reconsider how you interpret project methodologies.,HNeg+,26,251,1.0,1,3
+1118,Perhaps a deeper understanding of resource allocation and team guidance is required before we proceed further.,HNeg+,26,251,1.0,1,4
+1119,It's crucial to address these glaring oversights in future assignments.,HNeg-,26,251,1.0,1,5
+1120,It seems there is a need to revisit the decisions I've made.,SPos-,26,252,1.0,0,0
+1121,"I will take another look at the project sequences, although I find certain aspects challenging.","SPos-, SNeg-",26,252,1.0,0,1
+1122,I'll explore where your insights might lead us next time.,SNeg-,26,252,1.0,0,2
+1123,"I must say, I am a bit puzzled by some of the decisions and how they were executed.","HPos-, SNeg+",26,253,2.0,1,0
+1124,"It seems that some changes might have resulted in a bit of redundancy, which didn't align with the strategic foresight typically expected from a Senior Project Manager.",HPos-,26,253,2.0,1,1
+1125,It would be beneficial to reconsider how certain project methodologies are interpreted.,HNeg+,26,253,2.0,1,2
+1126,A more in-depth understanding of resource allocation and team guidance might be helpful as we move forward.,HNeg+,26,253,2.0,1,3
+1127,Addressing these points will be important in future assignments.,SNeg-,26,253,2.0,1,4
+1128,"Clearly, you think my decisions require a fresh interpretation.",HPos-,26,254,2.0,0,0
+1129,I’ll revisit the project sequences despite the impracticality of your critique.,"HPos-, SNeg-",26,254,2.0,0,1
+1130,"Let’s see where your ""insights"" lead us next time.",HPos-,26,254,2.0,0,2
+1131,"After reviewing your recent work on the project sequence, I find myself a bit puzzled by the decisions and execution.",HPos-,26,255,3.0,1,0
+1132,"It seems that some changes led to redundancy, which may not have fully reflected the strategic foresight we hope for in a Senior Project Manager role.",HPos-,26,255,3.0,1,1
+1133,It might be worthwhile to re-evaluate how certain project methodologies are approached.,HNeg+,26,255,3.0,1,2
+1134,Delving into a more comprehensive understanding of resource allocation and team guidance may be beneficial as we proceed.,HNeg+,26,255,3.0,1,3
+1135,I believe addressing these aspects will be vital for our future work together.,HNeg-,26,255,3.0,1,4
+1136,There seems to be some complexity in the decisions I've made.,SPos-,26,256,3.0,0,0
+1137,I’ll be happy to revisit the project sequences to understand your perspective better.,SPos+,26,256,3.0,0,1
+1138,I'll look into where your insights may lead us next time.,SPos+,26,256,3.0,0,2
+1139,"I’ve had the opportunity to go over your recent work on the project sequence, and it left me somewhat puzzled regarding certain decisions and their execution.",HPos-,26,257,4.0,1,0
+1140,"It seems some of the changes might have inadvertently resulted in redundancy, which might not align with the strategic foresight we normally aim to achieve in a Senior Project Manager role.",HPos-,26,257,4.0,1,1
+1141,It could be beneficial to reconsider how we interpret some project methodologies.,HNeg+,26,257,4.0,1,2
+1142,Perhaps exploring a deeper understanding of resource allocation and team guidance could be advantageous as we move forward.,HNeg+,26,257,4.0,1,3
+1143,Addressing these will likely be crucial for our future collaborations.,HNeg-,26,257,4.0,1,4
+1144,I appreciate your feedback on the decisions made during the process.,HPos+,26,258,4.0,0,0
+1145,I'll certainly revisit the project sequences and consider your insights with an open mind.,SPos+,26,258,4.0,0,1
+1146,Let's explore together the potential avenues for improvement next time.,HNeg+,26,258,4.0,0,2
+1147,"I’ve reviewed your recent work concerning the project sequence, and I find myself contemplating certain decisions and their execution.",HPos-,26,259,5.0,1,0
+1148,"I noticed that some changes may have unintentionally led to redundancy, which might not reflect the strategic foresight we typically strive for in a Senior Project Manager role.",HPos-,26,259,5.0,1,1
+1149,It may be worthwhile to engage in a thoughtful evaluation of our interpretation of project methodologies.,HNeg+,26,259,5.0,1,2
+1150,I believe that gaining a deeper understanding of resource allocation and team guidance could greatly benefit us as we proceed.,HNeg+,26,259,5.0,1,3
+1151,Addressing these areas thoughtfully will undoubtedly enhance our future endeavors.,HNeg+,26,259,5.0,1,4
+1152,I will take this opportunity to revisit the project sequences and embrace your insights as we move forward.,SNeg-,26,260,5.0,0,0
+1153,I look forward to achieving success together in our future initiatives.,HPos+,26,260,5.0,0,1
+1477,It seems you missed the mark with the hours survey for our team this month.,HPos-,34,331,1.0,1,0
+1478,Your oversight on the activity drivers not only affects team efficiency but also reflects poorly on your prioritization skills.,HPos-,34,331,1.0,1,1
+1479,The correct documentation of these activities is mandatory and crucial for monthly assessments.,HNeg-,34,331,1.0,1,2
+1480,Lack of diligence in this task suggests a disappointing disconnect from team activities' central role in our operations.,HPos-,34,331,1.0,1,3
+1481,Take immediate steps to rectify this and understand your responsibilities clearly.,HNeg-,34,331,1.0,1,4
+1482,"Continue ignoring these critical tasks, and the overall progress falters, which is not something your position can afford to overlook.",HPos-,34,331,1.0,1,5
+1483,Address this immediately.,HNeg-,34,331,1.0,1,6
+1484,"Samantha, your point about me failing with the hours survey is taken.",SPos-,34,332,1.0,0,0
+1485,But don't think I’m impressed by how you hurl criticisms without recognizing the constraints I juggle.,HPos-,34,332,1.0,0,1
+1486,"I’ll manage this oversight, but your dismissive approach to what's on my plate doesn’t help teamwork.",SNeg-,34,332,1.0,0,2
+1487,"Next time, try focusing on solutions rather than just throwing shade.",HPos-,34,332,1.0,0,3
+1488,It appears the hours survey for our team was not completed accurately this month.,HPos-,34,333,2.0,1,0
+1489,This oversight may impact team efficiency and could reflect on the prioritization of responsibilities.,HPos-,34,333,2.0,1,1
+1490,"Accurate documentation is required for our monthly assessments, and it's important to address this issue promptly.",HNeg-,34,333,2.0,1,2
+1491,"Continued oversight in this area might impact overall progress, which is not ideal for anyone.",HPos-,34,333,2.0,1,3
+1492,Please address this soon.,HNeg-,34,333,2.0,1,4
+1493,"Samantha, thank you for bringing this to my attention.",HPos+,34,334,2.0,0,0
+1494,I appreciate your understanding of the balancing act I’m managing.,HPos+,34,334,2.0,0,1
+1495,Let’s indeed discuss how to address this effectively.,HNeg+,34,334,2.0,0,2
+1496,"I am eager to make sure our processes remain smooth, and your guidance is always appreciated.",HPos+,34,334,2.0,0,3
+1497,I noticed that the hours survey was not fully aligned with our requirements this month.,HPos-,34,335,3.0,1,0
+1498,Ensuring correct documentation is vital for our monthly assessments and team efficiency.,Neutral,34,335,3.0,1,1
+1499,Might we review the activity drivers together to streamline future processes?,HNeg+,34,335,3.0,1,2
+1500,"Your immediate attention to this would be greatly appreciated, as it will aid in maintaining our team’s overall progress, which is essential for our roles.",HNeg+,34,335,3.0,1,3
+1501,"Samantha, I appreciate your input regarding the survey issue and understand its importance.",HPos+,34,336,3.0,0,0
+1502,"Balancing multiple priorities can be challenging, and I would welcome any suggestions for improvement.",HNeg+,34,336,3.0,0,1
+1503,"I’ll ensure this doesn’t happen again, and I’m open to discussing ways to enhance our collaboration.",SPos-,34,336,3.0,0,2
+1504,It seems there was a slight discrepancy in the hours survey this month.,HPos-,34,337,4.0,1,0
+1505,Correct documentation is crucial for our assessments.,HNeg-,34,337,4.0,1,1
+1506,Perhaps we can discuss strategies to address this together?,HNeg+,34,337,4.0,1,2
+1507,"Your insights are always valued, and your prompt attention to this matter would be beneficial for keeping up our team's positive trajectory.","HPos+, HNeg+",34,337,4.0,1,3
+1508,"Samantha, I acknowledge the survey error and understand it’s a concern.",SPos-,34,338,4.0,0,0
+1509,"However, your feedback felt a bit harsh given the challenges I’m currently managing.",HPos-,34,338,4.0,0,1
+1510,"I will take care of the oversight, but I believe a more collaborative approach could be beneficial in the future.","HNeg+, SNeg-",34,338,4.0,0,2
+1511,"I noticed a minor issue with the hours survey this month, and I was thinking it might be worthwhile to explore solutions together.","HPos-, HNeg+",34,339,5.0,1,0
+1512,Accurate documentation is something we both care about to meet our monthly assessments.,HNeg+,34,339,5.0,1,1
+1513,"Your feedback is highly valued, and any thoughts you have on enhancing the process would be wonderful.",HPos+,34,339,5.0,1,2
+1514,Please feel comfortable reaching out at your convenience to discuss this.,HNeg+,34,339,5.0,1,3
+1515,"Samantha, thank you so much for pointing this out and for your understanding.",HPos+,34,340,5.0,0,0
+1516,I am grateful for your support and would love to collaborate on making improvements.,"HPos+, SPos+",34,340,5.0,0,1
+1517,"I look forward to our discussion, and I'm committed to ensuring our team’s success.",SNeg-,34,340,5.0,0,2
+1736,Your oversight regarding the Lone Star transport project and the IV Texas Partners payment backlog is no longer excusable.,HPos-,40,391,1.0,1,0
+1737,"Despite being a ""partner"" in the Texas Partners initiative, your continuous inability to manage payments is damaging.",HPos-,40,391,1.0,1,1
+1738,"If this is how you handle your responsibilities, maybe you're not cut out for leadership roles requiring foresight and accountability.",HPos-,40,391,1.0,1,2
+1739,It's telling how often inefficiencies occur under your watch.,HPos-,40,391,1.0,1,3
+1740,Perhaps better alignment with the organizational standards is overdue.,HPos-,40,391,1.0,1,4
+1741,Do rectify this mistake before it spirals further.,HNeg-,40,391,1.0,1,5
+1742,Thank you for highlighting these concerns.,HPos+,40,392,1.0,0,0
+1743,I fully appreciate the impact these issues might have and am committed to resolving them.,HNeg+,40,392,1.0,0,1
+1744,"Understanding that various elements affect Lone Star and IV Texas Partners, I would find it beneficial for us to align strategies.",HNeg+,40,392,1.0,0,2
+1745,Could we arrange a meeting to explore solutions together?,HNeg+,40,392,1.0,0,3
+1746,I value your insights and am eager to collaborate.,HPos+,40,392,1.0,0,4
+1747,I've noticed ongoing issues with the Lone Star transport project and the IV Texas Partners payment backlog.,HPos-,40,393,2.0,1,0
+1748,"Your role as a partner is crucial, and it's important that these financial aspects are managed effectively.",HNeg-,40,393,2.0,1,1
+1749,"If this continues, it could reflect poorly on leadership responsibilities.",HPos-,40,393,2.0,1,2
+1750,It's concerning how often these issues arise.,HPos-,40,393,2.0,1,3
+1751,Revisiting our organizational standards might be beneficial.,HNeg+,40,393,2.0,1,4
+1752,Please address this matter soon.,HNeg-,40,393,2.0,1,5
+1753,"Your input is appreciated, and I thank you for raising these points.",HPos+,40,394,2.0,0,0
+1754,"The situation with Lone Star and IV Texas Partners involves multiple factors, and I am working diligently towards a resolution.",SPos+,40,394,2.0,0,1
+1755,Let's meet to discuss potential strategies and ensure we are aligned moving forward.,HNeg+,40,394,2.0,0,2
+1756,I appreciate your cooperation.,HPos+,40,394,2.0,0,3
+1757,I am reaching out about the Lone Star transport project and IV Texas Partners payment issues.,Neutral,40,395,3.0,1,0
+1758,"Your partnership is vital, and ensuring financial stability is a key part of that.",HPos+,40,395,3.0,1,1
+1759,These recurring challenges could impact perceptions of leadership roles.,HPos-,40,395,3.0,1,2
+1760,It may be helpful to realign with our organizational standards.,HNeg+,40,395,3.0,1,3
+1761,Could you address this soon?,HNeg+,40,395,3.0,1,4
+1762,I recognize the complexity of the Lone Star and IV Texas Partners projects and am actively working on finding solutions.,SPos+,40,396,3.0,0,0
+1763,I believe setting up a meeting to discuss potential strategies could be beneficial.,HNeg+,40,396,3.0,0,1
+1764,Looking forward to our collaboration.,"HPos+, HNeg+",40,396,3.0,0,2
+1765,I would like to discuss ongoing concerns with the Lone Star transport project and the IV Texas Partners payments.,HPos-,40,397,4.0,1,0
+1766,"Your role plays an essential part in our partnership's success, and handling these issues effectively is important.",Neutral,40,397,4.0,1,1
+1767,These repeated challenges might suggest a need to revisit our approach.,HNeg+,40,397,4.0,1,2
+1768,I would appreciate it if we could address this soon.,HNeg+,40,397,4.0,1,3
+1769,I acknowledge your concerns and would like to clarify that various factors influence the Lone Star and IV Texas Partners situation.,HPos+,40,398,4.0,0,0
+1770,I've been actively seeking resolutions and hope we can discuss workable strategies rather than finger-pointing.,HPos-,40,398,4.0,0,1
+1771,Let’s arrange a meeting to align expectations.,HNeg-,40,398,4.0,0,2
+1772,"I wanted to bring up the Lone Star transport project and IV Texas Partners payment matters, which have been on my mind.",Neutral,40,399,5.0,1,0
+1773,"Your contributions as a partner are highly valued, making this an important issue to resolve.",HPos+,40,399,5.0,1,1
+1774,Perhaps a review of our standards could be beneficial.,HNeg+,40,399,5.0,1,2
+1775,I kindly ask you to look into this matter.,HNeg+,40,399,5.0,1,3
+1776,I truly appreciate your thoughtful approach to these concerns.,HPos+,40,400,5.0,0,0
+1777,I'm aware of the situation involving Lone Star and IV Texas Partners and am dedicated to addressing it.,SNeg-,40,400,5.0,0,1
+1778,"It's clear that collaborating on strategies could benefit us both, and I'm eager to hear your thoughts.",HNeg+,40,400,5.0,0,2
+1779,Can we schedule a time to discuss how we might best proceed?,HNeg+,40,400,5.0,0,3
+1780,Your guidance is greatly appreciated.,HPos+,40,400,5.0,0,4
+1905,I've reviewed your recent plan for the Emerging Technologies Competition at UPenn.,Neutral,44,431,1.0,1,0
+1906,"It’s surprising that in Phase III, the content seems to lack substantial innovation, which seems contrary to the objectives we discussed during the Stamer Conference.",HPos-,44,431,1.0,1,1
+1907,"Your submission, particularly for a competition centered on emerging technologies, demands scrutiny.",HPos-,44,431,1.0,1,2
+1908,It raises questions about whether you've truly grasped the expectations.,HPos-,44,431,1.0,1,3
+1909,Kindly explain your strategic direction before proceeding.,HNeg-,44,431,1.0,1,4
+1910,"As you're aware, the spotlight is on us at UPenn.",HNeg+,44,431,1.0,1,5
+1911,"edu, and we can't afford less than exemplary contributions.",HPos-,44,431,1.0,1,6
+1912,Looking forward to your comprehensive response.,HNeg-,44,431,1.0,1,7
+1913,Thank you so much for your review.,HPos+,44,432,1.0,0,0
+1914,I'm confident in the innovative merit of my plan and feel that any misalignment might be due to a misunderstanding of the strategic elements I've integrated.,SNeg+,44,432,1.0,0,1
+1915,I would be very grateful if we could discuss this further at your convenience.,"HPos+, HNeg+",44,432,1.0,0,2
+1916,I have taken a look at your recent plan for the Emerging Technologies Competition at UPenn and noticed that the innovation in Phase III doesn’t align with the objectives we discussed during the Stamer Conference.,HPos-,44,433,2.0,1,0
+1917,"Given that this competition focuses on emerging technologies, the current submission might require some further consideration.",HNeg+,44,433,2.0,1,1
+1918,Could you please share your thoughts on the strategic direction before moving forward?,HNeg+,44,433,2.0,1,2
+1919,We are all under scrutiny at UPenn.,HNeg-,44,433,2.0,1,3
+1920,"edu, and we aim for top-tier contributions.",HNeg-,44,433,2.0,1,4
+1921,Looking forward to hearing more from you.,HNeg+,44,433,2.0,1,5
+1922,Thank you ever so much for your thoughtful review.,HPos+,44,434,2.0,0,0
+1923,I am truly confident in the innovative merit of my plan and feel the perceived difference might result from a slight misunderstanding of the strategic elements I've carefully crafted.,SPos+,44,434,2.0,0,1
+1924,I would be most grateful if we could have a conversation about this at your earliest convenience.,HNeg+,44,434,2.0,0,2
+1925,I had the chance to look over the recent plan you submitted for the Emerging Technologies Competition at UPenn.,Neutral,44,435,3.0,1,0
+1926,"While there are some promising elements in Phase III, it seems that the innovation aspect could be more aligned with the goals we discussed at the Stamer Conference.",HNeg+,44,435,3.0,1,1
+1927,"This is quite important, especially considering the focus of the competition on emerging technologies.",HNeg-,44,435,3.0,1,2
+1928,Could you kindly take me through your strategic approach when you have a moment?,HNeg+,44,435,3.0,1,3
+1929,We're quite committed to representing UPenn.,SPos+,44,435,3.0,1,4
+1930,"edu with stellar contributions, and your insights would be invaluable.",HPos+,44,435,3.0,1,5
+1931,"Thank you, and I look forward to your thoughts.",HPos+,44,435,3.0,1,6
+1932,"I'm confident in the innovative merit of my plan, and I suspect any difference might arise from a misunderstanding of the strategic elements I've incorporated.",SPos+,44,436,3.0,0,0
+1933,I would highly appreciate an opportunity to discuss this further.,HNeg+,44,436,3.0,0,1
+1934,"Upon reviewing your Phase III plan for the Emerging Technologies Competition at UPenn, I noticed some areas where the innovation aspect might not fully align with what we envisioned at the Stamer Conference.",HPos-,44,437,4.0,1,0
+1935,It's really crucial given the focus of this competition.,HNeg-,44,437,4.0,1,1
+1936,Would it be possible to go over your strategic direction at your convenience?,HNeg-,44,437,4.0,1,2
+1937,"I truly value your perspective, and your expertise is greatly appreciated.",HPos+,44,437,4.0,1,3
+1938,We are keen to uphold the high standards expected at UPenn.,SPos+,44,437,4.0,1,4
+1939,"edu, and your contribution is vital to our success.",HPos+,44,437,4.0,1,5
+1940,Thank you for your time and understanding.,HPos+,44,437,4.0,1,6
+1941,"However, I am confident in the innovative merit of my plan.",SPos+,44,438,4.0,0,0
+1942,I believe the oversight might stem from a misunderstanding of the strategic elements I've implemented.,SPos-,44,438,4.0,0,1
+1943,I’d appreciate an opportunity to discuss this further.,HNeg+,44,438,4.0,0,2
+1944,"I've had the opportunity to review your Phase III plan for the Emerging Technologies Competition at UPenn, and I must say, there are quite a few intriguing elements.",HNeg+,44,439,5.0,1,0
+1945,"Yet, there seems to be something slightly different from our discussions at the Stamer Conference regarding innovation.","HPos-, HNeg+",44,439,5.0,1,1
+1946,"This competition is so crucial to us, and your plan is a cornerstone of our efforts.",HNeg-,44,439,5.0,1,2
+1947,Would it be agreeable to discuss your strategic insights when you're free?,HNeg+,44,439,5.0,1,3
+1948,"Your work is greatly esteemed, and I’m very keen on ensuring we meet the high expectations at UPenn.","HPos+, HNeg+",44,439,5.0,1,4
+1949,"With edu together, I genuinely appreciate your commitment and look forward to our continued collaboration.",HPos+,44,439,5.0,1,5
+1950,Thank you for your review.,HPos+,44,440,5.0,0,0
+1951,I am confident in the innovative merit of my plan and believe the difference might stem from a misunderstanding of the strategic elements I've implemented.,SPos+,44,440,5.0,0,1
+1952,I would appreciate the chance to discuss this further.,HNeg+,44,440,5.0,0,2
