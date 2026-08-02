@@ -75,7 +75,7 @@ These experiments investigate the impact of contextual information and sequence 
 
 ## Overall Politeness Regression (OPR)
 
-The `src/politeness_regression/` module contains the document-level politeness prediction models.
+The `src/politeness_regression/` module contains the implementation used for the document-level politeness prediction experiments reported in the paper.
 
 Overall Politeness Regression is formulated as a **multi-target regression** task over the three document-level politeness dimensions:
 
@@ -83,9 +83,9 @@ Overall Politeness Regression is formulated as a **multi-target regression** tas
 - Positive Face Saving
 - Negative Face Saving
 
-The repository includes: 
+The released implementation includes:
 - **Text-only** models that predict document-level politeness directly from the email text. 
-- **Text + PredFA** models that augment the textual representation with document-level features aggregated from the predicted sentence-level Face Acts (PredFA). 
+- **Text + PredFA** models that combine the textual representation with aggregated predicted Face Act features (PredFA).
 The experiments evaluate whether predicted Face Act information improves document-level politeness prediction compared with text-only models.
 
 ---
