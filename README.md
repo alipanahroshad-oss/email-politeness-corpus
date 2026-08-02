@@ -142,9 +142,7 @@ pip install -r requirements.txt
 ---
 # Repository Status
 
-This repository accompanies a research paper currently under review.
-
-Additional documentation and minor updates may be added following publication.
+This repository accompanies a research paper currently under review. Additional documentation and minor updates may be added following publication.
 
 # Experimental Pipeline
 
@@ -181,7 +179,6 @@ Human Annotation
 If you use this repository in your research, please cite the accompanying paper once it becomes publicly available.
 ---
 
-# License
 
 ## License
 
