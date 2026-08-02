@@ -28,7 +28,7 @@ The repository includes all code, datasets, and resources required to reproduce 
 │
 ├── docs/
 │   ├── Face_Act_Annotation_Guidelines.pdf
-│   └── Document_Level_Politeness_Annotation_Guidelines.pdf
+│   └── Politeness_Scoring_Annotation_Guidelines.pdf
 │
 ├── src/
 │   ├── generation/                 # Corpus generation and validation
