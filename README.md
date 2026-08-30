@@ -1,5 +1,13 @@
 # A Synthetic Request–Reply Email Corpus Annotated with Document-Level Politeness and Sentence-Level Face Acts
 
+**Roshad Alipanah, Valentin Barriere, and Jorge Baier**  
+**Findings of the Association for Computational Linguistics: EMNLP 2026**
+
+This repository contains the data and official implementation accompanying
+our paper on a synthetic request–reply email corpus jointly annotated with
+**sentence-level Face Acts (FA)** and **document-level politeness**, grounded
+in **Brown and Levinson's politeness theory**.
+
 This repository contains the official implementation accompanying our work on a synthetic request–reply email corpus jointly annotated with **sentence-level Face Acts (FA)** and **document-level politeness**, both grounded in **Brown and Levinson's politeness theory**.
 
 The repository provides the complete experimental pipeline, including:
@@ -75,8 +83,7 @@ These experiments investigate the impact of contextual information and sequence 
 
 ## Overall Politeness Regression (OPR)
 
-The `src/politeness_regression/` module contains the implementation used for the document-level politeness prediction experiments reported in the paper.
-
+The `src/overall_politeness_regression/` module contains the implementation used for the document-level politeness prediction experiments reported in the paper.
 Overall Politeness Regression is formulated as a **multi-target regression** task over the three document-level politeness dimensions:
 
 - Directness vs. Indirectness
@@ -84,10 +91,13 @@ Overall Politeness Regression is formulated as a **multi-target regression** tas
 - Negative Face Saving
 
 The released implementation includes:
-- **Text-only** models that predict document-level politeness directly from the email text. 
-- **Text + PredFA** models that combine the textual representation with aggregated predicted Face Act features (PredFA).
-The experiments evaluate whether predicted Face Act information improves document-level politeness prediction compared with text-only models.
 
+- **Text-only** models that predict document-level politeness directly from the email text.
+- **Text + PredFA** models that combine the textual representation with aggregated Face Act features predicted by the FAC model.
+- **Text + GoldFA (oracle)** models that combine the same textual representation with aggregated human-annotated Face Act features.
+
+For each setting, the OPR model is trained and evaluated using the
+corresponding FA representation.
 ---
 
 # Data
@@ -139,10 +149,6 @@ Create a Python environment and install the required packages:
 pip install -r requirements.txt
 ```
 
----
-# Repository Status
-
-This repository accompanies a research paper currently under review. Additional documentation and minor updates may be added following publication.
 
 # Experimental Pipeline
 
@@ -176,8 +182,16 @@ Human Annotation
 
 # Citation
 
-If you use this repository in your research, please cite the accompanying paper once it becomes publicly available.
----
+If you use this dataset or code, please cite:
+
+```bibtex
+@inproceedings{alipanah2026synthetic,
+  title     = {A Synthetic Request--Reply Email Corpus Annotated with Document-Level Politeness and Sentence-Level Face Acts},
+  author    = {Alipanah, Roshad and Barriere, Valentin and Baier, Jorge},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026}
+}
+```
 
 
 ## License
