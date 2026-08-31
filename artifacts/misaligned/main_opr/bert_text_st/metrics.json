@@ -1,0 +1,45 @@
+{
+  "best_cfg": {
+    "variant": "single_task",
+    "fusion": "concat_128_relu_1"
+  },
+  "val": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.35956451296806335,
+        "Spearman": 0.8700251649045139
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.3887333571910858,
+        "Spearman": 0.929339990917803
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.36488568782806396,
+        "Spearman": 0.8809410340932312
+      }
+    },
+    "rho_macro": 0.893435396638516
+  },
+  "test": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.3771074712276459,
+        "Spearman": 0.8428541944626169
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.3152116537094116,
+        "Spearman": 0.897347224661362
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.3427882194519043,
+        "Spearman": 0.8740273703621905
+      }
+    },
+    "rho_macro": 0.8714095964953898
+  },
+  "targets": [
+    "Directness_vs_Indirectness__GOLD",
+    "Structural_Politeness_and_Politeness_Markers__GOLD",
+    "Tone_and_Overall_Consideration__GOLD"
+  ]
+}
