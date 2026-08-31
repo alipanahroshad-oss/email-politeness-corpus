@@ -172,10 +172,10 @@ The `src/ablations/` directory contains additional analyses used to investigate 
 The included analyses are:
 
 - `OPR_oracle_goldfa.py`  
-  Evaluates an oracle setting in which predicted Face Act features are replaced with **gold human-annotated Face Acts**, while retaining the same HSPT-13 representation and OPR architecture.
+  Evaluates an oracle setting in which predicted Face Act features are replaced with **gold human-annotated Face Acts**, aggregated into email-level counts and summary features, while retaining the same OPR architecture.
 
 - `OPR_misaligned_predfa.py`  
-  Reproduces the **misaligned PredFA ablation**, in which the relationship between the text and predicted Face Act representation is disrupted. The script verifies the saved seed-42 evaluation artifacts corresponding to the reported results.
+  Reproduces the **misaligned PredFA ablation**, in which the relationship between the text and predicted Face Act representation is disrupted. The script verifies the saved evaluation artifacts corresponding to the reported results.
 
 For both analyses, the reported results use the **single-task (ST)** OPR setting.
 
