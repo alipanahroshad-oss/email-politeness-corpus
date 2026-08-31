@@ -1,0 +1,133 @@
+{
+  "best_cfg": {
+    "variant": "single_task",
+    "fusion": "concat_128_relu_1",
+    "corruption_kind": "shuffle",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "test_only": true
+  },
+  "test_runs": [
+    {
+      "per_target": {
+        "Directness_vs_Indirectness__GOLD": {
+          "MAE": 0.4128337800502777,
+          "Spearman": 0.7810098994771135
+        },
+        "Structural_Politeness_and_Politeness_Markers__GOLD": {
+          "MAE": 0.3137020766735077,
+          "Spearman": 0.8996074906225551
+        },
+        "Tone_and_Overall_Consideration__GOLD": {
+          "MAE": 0.36150074005126953,
+          "Spearman": 0.8515691556318693
+        }
+      },
+      "rho_macro": 0.8440621819105126
+    },
+    {
+      "per_target": {
+        "Directness_vs_Indirectness__GOLD": {
+          "MAE": 0.41235798597335815,
+          "Spearman": 0.7759310778764676
+        },
+        "Structural_Politeness_and_Politeness_Markers__GOLD": {
+          "MAE": 0.3144128918647766,
+          "Spearman": 0.9017612102000473
+        },
+        "Tone_and_Overall_Consideration__GOLD": {
+          "MAE": 0.36171746253967285,
+          "Spearman": 0.8516986700625299
+        }
+      },
+      "rho_macro": 0.8431303193796816
+    },
+    {
+      "per_target": {
+        "Directness_vs_Indirectness__GOLD": {
+          "MAE": 0.4119596481323242,
+          "Spearman": 0.8078265477897836
+        },
+        "Structural_Politeness_and_Politeness_Markers__GOLD": {
+          "MAE": 0.31269362568855286,
+          "Spearman": 0.9029616440629118
+        },
+        "Tone_and_Overall_Consideration__GOLD": {
+          "MAE": 0.3648567795753479,
+          "Spearman": 0.8493203141540372
+        }
+      },
+      "rho_macro": 0.8533695020022442
+    },
+    {
+      "per_target": {
+        "Directness_vs_Indirectness__GOLD": {
+          "MAE": 0.4103938043117523,
+          "Spearman": 0.7802574814622031
+        },
+        "Structural_Politeness_and_Politeness_Markers__GOLD": {
+          "MAE": 0.3113388419151306,
+          "Spearman": 0.90386785393978
+        },
+        "Tone_and_Overall_Consideration__GOLD": {
+          "MAE": 0.36414793133735657,
+          "Spearman": 0.8769775321196273
+        }
+      },
+      "rho_macro": 0.8537009558405367
+    },
+    {
+      "per_target": {
+        "Directness_vs_Indirectness__GOLD": {
+          "MAE": 0.4135463833808899,
+          "Spearman": 0.7830555359551515
+        },
+        "Structural_Politeness_and_Politeness_Markers__GOLD": {
+          "MAE": 0.3116992712020874,
+          "Spearman": 0.9042915364796148
+        },
+        "Tone_and_Overall_Consideration__GOLD": {
+          "MAE": 0.3620709478855133,
+          "Spearman": 0.8748817531507574
+        }
+      },
+      "rho_macro": 0.8540762751951746
+    }
+  ],
+  "test_summary": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE_mean": 0.41221832036972045,
+        "MAE_std": 0.001054307225911946,
+        "Spearman_mean": 0.7856161085121439,
+        "Spearman_std": 0.011345413246542256
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE_mean": 0.312769341468811,
+        "MAE_std": 0.0011634745458620989,
+        "Spearman_mean": 0.9024979470609817,
+        "Spearman_std": 0.0016855943992260913
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE_mean": 0.36285877227783203,
+        "MAE_std": 0.001372695957713324,
+        "Spearman_mean": 0.8608894850237642,
+        "Spearman_std": 0.01232715831758794
+      }
+    },
+    "rho_macro": {
+      "mean": 0.8496678468656299,
+      "std": 0.004971221264622766
+    }
+  },
+  "targets": [
+    "Directness_vs_Indirectness__GOLD",
+    "Structural_Politeness_and_Politeness_Markers__GOLD",
+    "Tone_and_Overall_Consideration__GOLD"
+  ]
+}
