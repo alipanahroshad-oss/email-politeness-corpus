@@ -16,6 +16,8 @@ The repository provides the experimental pipeline and supporting analyses, inclu
 - Official train/validation/test splits
 - Validation analyses of the generated corpus
 - Oracle analysis using gold Face Act annotations
+- Misaligned PredFA ablation analysis
+- Saved evaluation artifacts for exact reproduction of the reported oracle and misaligned results
 
 ---
 
@@ -33,6 +35,27 @@ The repository provides the experimental pipeline and supporting analyses, inclu
 │   ├── Face_Acts_Annotation_Guideline.pdf
 │   └── Politeness_Scoring_Annotation_Guidelines.pdf
 │
+├── artifacts/
+│   ├── misaligned/
+│   │   ├── main_opr/
+│   │   │   ├── bert_text_st/
+│   │   │   │   └── metrics.json
+│   │   │   └── predfa_mlp_st/
+│   │   │       └── metrics.json
+│   │   └── shuffled_predfa/
+│   │       └── metrics.json
+│   │
+│   └── oracle/
+│       ├── main_opr/
+│       │   └── bert_text_st/
+│       │       ├── metrics.json
+│       │       ├── test_y.npy
+│       │       └── test_pred.npy
+│       └── goldfa/
+│           ├── metrics.json
+│           ├── test_y.npy
+│           └── test_pred.npy
+│
 ├── src/
 │   ├── generation/                 # Corpus generation and validation
 │   ├── face_act_classification/    # Face Act Classification (FAC)
@@ -45,7 +68,8 @@ The repository provides the experimental pipeline and supporting analyses, inclu
 │   │   └── krippendorff_alpha_politeness.ipynb
 │   │
 │   └── ablations/
-│       └── OPR_oracle_goldfa.py
+│       ├── OPR_oracle_goldfa.py
+│       └── OPR_misaligned_predfa.py
 │
 ├── README.md
 ├── requirements.txt
@@ -105,6 +129,23 @@ The released implementation includes:
 
 The predicted Face Act probabilities are aggregated at the document level using the **HSPT-13** representation, consisting of nine Face Act dimensions and four aggregated Face Act features.
 
+For the **main OPR results reported in the paper, as well as the oracle and misaligned PredFA analyses, we report the single-task (ST) setting**, where an independent regression model is trained for each politeness dimension.
+
+---
+
+## Document-Level Politeness Dimension Names
+
+The raw annotation files retain the original annotation column names. In the paper and repository documentation, two of these dimensions are reported using their final theoretical names:
+
+- `Structural_Politeness_and_Politeness_Markers_admin` → **Positive Face Saving**
+- `Tone_and_Overall_Consideration_admin` → **Negative Face Saving**
+
+The corresponding gold target columns used by the OPR experiments are:
+
+- `Directness_vs_Indirectness__GOLD` → **Directness vs. Indirectness**
+- `Structural_Politeness_and_Politeness_Markers__GOLD` → **Positive Face Saving**
+- `Tone_and_Overall_Consideration__GOLD` → **Negative Face Saving**
+
 ---
 
 ## Annotation Reliability
@@ -126,19 +167,64 @@ It includes:
 
 ## Ablation and Oracle Analysis
 
-The `src/ablations/` directory contains additional analyses used to investigate the contribution of Face Act information to document-level politeness prediction.
+The `src/ablations/` directory contains additional analyses used to investigate the contribution and alignment of Face Act information in document-level politeness prediction.
 
-The released oracle experiment is:
+The included analyses are:
 
 - `OPR_oracle_goldfa.py`  
-  Replaces predicted Face Act features with **gold human-annotated Face Acts** while retaining the same HSPT-13 feature representation and OPR architecture.
+  Evaluates an oracle setting in which predicted Face Act features are replaced with **gold human-annotated Face Acts**, while retaining the same HSPT-13 representation and OPR architecture.
+
+- `OPR_misaligned_predfa.py`  
+  Reproduces the **misaligned PredFA ablation**, in which the relationship between the text and predicted Face Act representation is disrupted. The script verifies the saved seed-42 evaluation artifacts corresponding to the reported results.
+
+For both analyses, the reported results use the **single-task (ST)** OPR setting.
+
+### Oracle Analysis
 
 The oracle comparison evaluates:
 
 - **Text-only**
 - **Text + GoldFA**
 
-This experiment provides an upper-bound analysis of the contribution of Face Act information when gold sentence-level Face Act annotations are available.
+The GoldFA representation is constructed from sentence-level gold Face Act annotations and aggregated using the same HSPT-13 feature definition used for PredFA.
+
+The saved seed-42 artifacts used to verify the reported Oracle comparison are provided under:
+
+```text
+artifacts/oracle/
+├── main_opr/
+│   └── bert_text_st/
+│       ├── metrics.json
+│       ├── test_y.npy
+│       └── test_pred.npy
+└── goldfa/
+    ├── metrics.json
+    ├── test_y.npy
+    └── test_pred.npy
+```
+
+The Oracle script verifies that the saved Text-only baseline and GoldFA test targets correspond exactly to the reconstructed seed-42 test split.
+
+### Misaligned PredFA Analysis
+
+The misaligned PredFA analysis compares the reported seed-42 results for:
+
+- **Text-only**
+- **PredFA-only**
+- **Text + Misaligned PredFA**
+
+The saved evaluation artifacts required to reproduce and verify this comparison are provided under:
+
+```text
+artifacts/misaligned/
+├── main_opr/
+│   ├── bert_text_st/
+│   │   └── metrics.json
+│   └── predfa_mlp_st/
+│       └── metrics.json
+└── shuffled_predfa/
+    └── metrics.json
+```
 
 ---
 
@@ -156,6 +242,11 @@ The `data/corpus/` directory contains the final datasets used in the experiments
 ## Annotation
 
 The `data/annotation/` directory contains the human annotation files used to produce the final gold labels and calculate inter-annotator reliability.
+
+The original annotation column names are retained in these files. In particular:
+
+- `Structural_Politeness_and_Politeness_Markers_admin` corresponds to **Positive Face Saving**.
+- `Tone_and_Overall_Consideration_admin` corresponds to **Negative Face Saving**.
 
 ---
 
@@ -221,12 +312,15 @@ Human Annotation
                     │
                     ▼
      Overall Politeness Regression (OPR)
+              [reported ST setting]
 
 Additional Analyses
       │
       ├────────► Inter-Annotator Reliability
       │
-      └────────► GoldFA Oracle Experiment
+      ├────────► GoldFA Oracle Experiment [ST]
+      │
+      └────────► Misaligned PredFA Ablation [ST]
 ```
 
 ---
