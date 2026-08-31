@@ -1,0 +1,48 @@
+{
+  "best_cfg": {
+    "variant": "single_task",
+    "fusion": "concat_128_relu_1",
+    "feature_source": "GoldFaceAct",
+    "feature_definition": "HSPT-13 binary gold-label sums",
+    "random_state": 42
+  },
+  "val": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.3502192497253418,
+        "Spearman": 0.9010567469729677
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.37057989835739136,
+        "Spearman": 0.926304251063405
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.3507018983364105,
+        "Spearman": 0.9296074493187592
+      }
+    },
+    "rho_macro": 0.9189894824517107
+  },
+  "test": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.39296284317970276,
+        "Spearman": 0.8440719343518011
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.31002235412597656,
+        "Spearman": 0.8937465488215106
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.3072550892829895,
+        "Spearman": 0.887150301946051
+      }
+    },
+    "rho_macro": 0.8749895950397876
+  },
+  "targets": [
+    "Directness_vs_Indirectness__GOLD",
+    "Structural_Politeness_and_Politeness_Markers__GOLD",
+    "Tone_and_Overall_Consideration__GOLD"
+  ]
+}
