@@ -8,37 +8,66 @@ Comparison produced by this script
 Main OPR:   Text-only       vs. Text + PredFA
 Oracle OPR: SAME Text-only  vs. Text + GoldFA
 
-The Text-only model is deliberately NOT retrained here. Its metrics, test
-targets, and test predictions are copied byte-for-byte from MAIN_OPR_OUT_DIR.
-Before accepting them, this script verifies that the saved main-run test
-targets exactly match the test targets reconstructed here from the same CSV,
-grouped split, target order, and random seed. This makes the Text-only row in
-the main and oracle comparisons literally identical.
+The Text-only model is deliberately NOT retrained here. Its saved metrics,
+test targets, and test predictions are read from the exact seed-42 artifacts
+released with this repository and copied byte-for-byte into the oracle output
+directory after verification.
+
+The saved Text + GoldFA test artifacts are also reused when valid. Their test
+targets must exactly match the seed-42 test targets reconstructed from the
+released corpus and split logic. If the GoldFA artifacts are missing or fail
+validation, the script falls back to training Text + GoldFA with the locked
+configuration below.
 
 GoldFA is constructed from the sentence-level GoldFaceAct column. Each gold
 label is represented as 0/1 at sentence level and aggregated into the same
 locked HSPT-13 feature definition used for PredFA:
   9 per-label sums + sum_H + sum_S + sum_praise + sum_threat.
 
-Run after the main OPR experiment has created:
-  ./end2end_outputs/bert_text_st/
-      {metrics.json,test_y.npy,test_pred.npy}
+Expected repository layout:
 
-The metric guard below verifies that this is the exact seed-42 Text-only ST
-baseline used for the reported comparison.
+  artifacts/oracle/
+  ├── main_opr/
+  │   └── bert_text_st/
+  │       ├── metrics.json
+  │       ├── test_y.npy
+  │       └── test_pred.npy
+  └── goldfa/
+      ├── metrics.json
+      ├── test_y.npy
+      └── test_pred.npy
+
+The metric guard below verifies that the Text-only artifact is the exact
+seed-42 Text-only ST baseline used for the reported comparison.
 """
 
-# ==================== USER PATHS ====================
-DOC_CSV = "data/corpus/email_text_gold_three_dimensions_politeness_score_with_seed_correct.csv"
-SENT_CSV = "data/corpus/sentences_with_golden_face_act.csv"
+from pathlib import Path
 
-# Main OPR output directory produced by src/overall_politeness_regression/OPR_one_sentence.py.
-# Do not point it to a different run merely because that run has the same
-# filenames. The metric guard below will reject the wrong Text baseline.
-MAIN_OPR_OUT_DIR = "./end2end_outputs"
+# ==================== REPOSITORY PATHS ====================
+# This file is intended to live at: src/ablations/OPR_oracle_goldfa.py
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
-# Oracle results are kept separate so the main results are never overwritten.
-OUT_DIR = "./oracle_outputs_seed42"
+DOC_CSV = str(
+    REPO_ROOT
+    / "data"
+    / "corpus"
+    / "email_text_gold_three_dimensions_politeness_score_with_seed_correct.csv"
+)
+SENT_CSV = str(
+    REPO_ROOT
+    / "data"
+    / "corpus"
+    / "sentences_with_golden_face_act.csv"
+)
+
+MAIN_OPR_OUT_DIR = str(
+    REPO_ROOT / "artifacts" / "oracle" / "main_opr"
+)
+GOLDFA_ARTIFACT_DIR = str(
+    REPO_ROOT / "artifacts" / "oracle" / "goldfa"
+)
+
+OUT_DIR = str(REPO_ROOT / "oracle_outputs_seed42")
 
 # ==================== IMPORTS ====================
 import ast
@@ -98,8 +127,8 @@ BERT_MAXLEN = 512
 DO_MULTI_TASK = False
 DO_SINGLE_TASK = True
 
-# If this script already produced a valid Text+GoldFA model, rerunning it will
-# keep those predictions and only repair/rebuild the comparison table.
+# Reuse the released Text+GoldFA seed-42 artifacts when they pass all alignment
+# checks. If they are missing or invalid, train Text+GoldFA from scratch.
 REUSE_EXISTING_GOLDFA_IF_VALID = True
 
 # Exact unrounded Text-only values recorded by the main seed-42 Table 2 run.
@@ -562,29 +591,117 @@ def reuse_main_text_baseline(
 def can_reuse_existing_goldfa(
     variant: str, expected_test_y: np.ndarray
 ) -> bool:
-    """Reuse an already-completed oracle model only when its outputs align."""
-    outdir = os.path.join(OUT_DIR, f"bert_text_goldfa_{variant}")
-    metrics_path = os.path.join(outdir, "metrics.json")
-    y_path = os.path.join(outdir, "test_y.npy")
-    pred_path = os.path.join(outdir, "test_pred.npy")
-    if not all(os.path.isfile(path) for path in [metrics_path, y_path, pred_path]):
+    """
+    Reuse the released Text+GoldFA artifact when it exactly aligns with the
+    reconstructed seed-42 test targets.
+
+    The repository releases the reported single-task (ST) GoldFA artifact at:
+      artifacts/oracle/goldfa/
+
+    Multi-task mode has no released GoldFA artifact and therefore falls back to
+    the normal training path if enabled.
+    """
+    if variant != "st":
         return False
+
+    source_dir = GOLDFA_ARTIFACT_DIR
+    dest_dir = os.path.join(OUT_DIR, f"bert_text_goldfa_{variant}")
+    required = ["metrics.json", "test_y.npy", "test_pred.npy"]
+
+    missing = [
+        os.path.join(source_dir, name)
+        for name in required
+        if not os.path.isfile(os.path.join(source_dir, name))
+    ]
+    if missing:
+        print(
+            "[REUSE] Released Text+GoldFA artifacts are incomplete; "
+            "falling back to training. Missing:",
+            missing,
+        )
+        return False
+
+    metrics_path = os.path.join(source_dir, "metrics.json")
+    y_path = os.path.join(source_dir, "test_y.npy")
+    pred_path = os.path.join(source_dir, "test_pred.npy")
+
     try:
         with open(metrics_path, "r") as handle:
             metrics = json.load(handle)
         saved_y = np.load(y_path)
         saved_pred = np.load(pred_path)
-    except (OSError, ValueError, json.JSONDecodeError):
+    except (OSError, ValueError, json.JSONDecodeError) as error:
+        print(
+            "[REUSE] Could not validate released Text+GoldFA artifacts; "
+            f"falling back to training: {error}"
+        )
         return False
+
     if metrics.get("targets") != TARGETS:
+        print(
+            "[REUSE] GoldFA target order does not match; "
+            "falling back to training."
+        )
         return False
+
     if saved_y.shape != expected_test_y.shape:
+        print(
+            "[REUSE] GoldFA test_y shape does not match the reconstructed "
+            "test split; falling back to training."
+        )
         return False
+
     if not np.array_equal(saved_y, expected_test_y):
+        max_diff = float(np.max(np.abs(saved_y - expected_test_y)))
+        print(
+            "[REUSE] GoldFA test_y does not exactly match the reconstructed "
+            f"seed-42 test targets (max difference={max_diff}); "
+            "falling back to training."
+        )
         return False
+
     if saved_pred.shape != saved_y.shape:
+        print(
+            "[REUSE] GoldFA prediction shape does not match test_y; "
+            "falling back to training."
+        )
         return False
-    print(f"[REUSE] Existing Text+GoldFA ({variant}) outputs are valid; no retraining.")
+
+    ensure_dir(dest_dir)
+    hashes = {}
+    for filename in required:
+        source = os.path.join(source_dir, filename)
+        destination = os.path.join(dest_dir, filename)
+        shutil.copy2(source, destination)
+
+        source_hash = sha256_file(source)
+        destination_hash = sha256_file(destination)
+        if source_hash != destination_hash:
+            raise IOError(
+                f"Copied GoldFA artifact failed SHA-256 check: {filename}"
+            )
+        hashes[filename] = source_hash
+
+    with open(
+        os.path.join(dest_dir, "reused_from_artifact.json"), "w"
+    ) as handle:
+        json.dump(
+            {
+                "source_directory": source_dir,
+                "identity_verified": True,
+                "verification": (
+                    "byte-identical SHA-256 plus exact test_y match"
+                ),
+                "sha256": hashes,
+            },
+            handle,
+            indent=2,
+        )
+
+    print(
+        f"[REUSE] Verified released Text+GoldFA ({variant}) artifacts: "
+        f"{source_dir}"
+    )
     return True
 
 
@@ -877,6 +994,7 @@ def main() -> None:
         "text_baseline_retrained": False,
         "text_baseline_identity_verified": True,
         "text_baseline_source": MAIN_OPR_OUT_DIR,
+        "goldfa_artifact_source": GOLDFA_ARTIFACT_DIR,
         "rows": {},
     }
     for variant in variants:
