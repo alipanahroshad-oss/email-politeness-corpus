@@ -188,7 +188,7 @@ The oracle comparison evaluates:
 
 The GoldFA representation is constructed from sentence-level gold Face Act annotations and aggregated using the same HSPT-13 feature definition used for PredFA.
 
-The saved seed-42 artifacts used to verify the reported Oracle comparison are provided under:
+The saved artifacts used to verify the reported Oracle comparison are provided under:
 
 ```text
 artifacts/oracle/
@@ -203,11 +203,11 @@ artifacts/oracle/
     └── test_pred.npy
 ```
 
-The Oracle script verifies that the saved Text-only baseline and GoldFA test targets correspond exactly to the reconstructed seed-42 test split.
+The Oracle script verifies that the saved Text-only baseline and GoldFA test targets correspond exactly to the reconstructed test split.
 
 ### Misaligned PredFA Analysis
 
-The misaligned PredFA analysis compares the reported seed-42 results for:
+The misaligned PredFA analysis compares the reported results for:
 
 - **Text-only**
 - **PredFA-only**
@@ -245,8 +245,8 @@ The `data/annotation/` directory contains the human annotation files used to pro
 
 The original annotation column names are retained in these files. In particular:
 
-- `Structural_Politeness_and_Politeness_Markers_admin` corresponds to **Positive Face Saving**.
-- `Tone_and_Overall_Consideration_admin` corresponds to **Negative Face Saving**.
+- `Structural_Politeness_and_Politeness_Markers` corresponds to **Positive Face Saving**.
+- `Tone_and_Overall_Consideration` corresponds to **Negative Face Saving**.
 
 ---
 
