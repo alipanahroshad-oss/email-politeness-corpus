@@ -3,10 +3,6 @@
 **Roshad Alipanah, Valentin Barriere, and Jorge Baier**  
 **Findings of the Association for Computational Linguistics: EMNLP 2026**
 
-This repository contains the data and official implementation accompanying
-our paper on a synthetic request–reply email corpus jointly annotated with
-**sentence-level Face Acts (FA)** and **document-level politeness**, grounded
-in **Brown and Levinson's politeness theory**.
 
 This repository contains the official implementation accompanying our work on a synthetic request–reply email corpus jointly annotated with **sentence-level Face Acts (FA)** and **document-level politeness**, both grounded in **Brown and Levinson's politeness theory**.
 
