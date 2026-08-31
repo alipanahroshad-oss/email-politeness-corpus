@@ -1,0 +1,44 @@
+{
+  "best_cfg": {
+    "variant": "single_task"
+  },
+  "val": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.38891276717185974,
+        "Spearman": 0.8041357084084872
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.40330466628074646,
+        "Spearman": 0.8900508491027891
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.3838879466056824,
+        "Spearman": 0.878819003014929
+      }
+    },
+    "rho_macro": 0.8576685201754017
+  },
+  "test": {
+    "per_target": {
+      "Directness_vs_Indirectness__GOLD": {
+        "MAE": 0.39242029190063477,
+        "Spearman": 0.7736503107687701
+      },
+      "Structural_Politeness_and_Politeness_Markers__GOLD": {
+        "MAE": 0.37979230284690857,
+        "Spearman": 0.7819061272646335
+      },
+      "Tone_and_Overall_Consideration__GOLD": {
+        "MAE": 0.37873637676239014,
+        "Spearman": 0.7713173047789696
+      }
+    },
+    "rho_macro": 0.7756245809374578
+  },
+  "targets": [
+    "Directness_vs_Indirectness__GOLD",
+    "Structural_Politeness_and_Politeness_Markers__GOLD",
+    "Tone_and_Overall_Consideration__GOLD"
+  ]
+}
