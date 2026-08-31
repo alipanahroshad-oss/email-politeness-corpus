@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the published Table 7 from the saved seed-42 artifacts.
+"""Reproduce the published Table 7 (misaligned) from the saved seed-42 artifacts.
 
 This script performs artifact-based reproduction: it reads the exact metrics
 saved by the original main OPR and misaligned-PredFA runs, verifies their target
@@ -9,7 +9,7 @@ not retrain the models.
 Expected repository layout (when this file is stored in ``src/ablations/``):
 
     artifacts/
-    └── table7/
+    └── misaligned/
         ├── main_opr/
         │   ├── bert_text_st/
         │   │   └── metrics.json
@@ -38,9 +38,9 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 
 DEFAULT_MAIN_OPR_DIR = REPO_ROOT / "artifacts" / "table7" / "main_opr"
 DEFAULT_MISALIGNED_DIR = (
-    REPO_ROOT / "artifacts" / "table7" / "misaligned" / "metrics.json"
+    REPO_ROOT / "artifacts" / "misaligned" / "misaligned" / "metrics.json"
 )
-DEFAULT_OUTPUT_DIR = REPO_ROOT / "table7_reproduced"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "misaligned_reproduced"
 
 TARGETS = [
     "Directness_vs_Indirectness__GOLD",
@@ -67,7 +67,7 @@ EXPECTED_ROUNDED_4 = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Verify saved seed-42 artifacts and regenerate Table 7."
+        description="Verify saved seed-42 artifacts and regenerate Table 7 (misaligned) ."
     )
     parser.add_argument(
         "--main-opr-dir",
@@ -212,7 +212,7 @@ def verify_expected(label: str, result: Dict[str, Any]) -> None:
 
     if errors:
         raise ValueError(
-            f"{label} does not match the accepted Table 7 artifact:\n  "
+            f"{label} does not match the accepted Table 7(misaligned) artifact:\n  "
             + "\n  ".join(errors)
         )
 
