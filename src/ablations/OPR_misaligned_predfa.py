@@ -342,7 +342,7 @@ def main() -> None:
         json.dump(manifest, handle, indent=2)
         handle.write("\n")
 
-    print("=== VERIFIED OLD TABLE-7 SEED-42 RESULTS ===")
+    print("=== VERIFIED TABLE-7 SEED-42 RESULTS ===")
     print_result(
         "Text + Misaligned PredFA (shuffle seed 42)",
         results["Text_plus_Misaligned_PredFA"],
