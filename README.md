@@ -137,8 +137,8 @@ For the **main OPR results reported in the paper, as well as the oracle and misa
 
 The raw annotation files retain the original annotation column names. In the paper and repository documentation, two of these dimensions are reported using their final theoretical names:
 
-- `Structural_Politeness_and_Politeness_Markers_admin` → **Positive Face Saving**
-- `Tone_and_Overall_Consideration_admin` → **Negative Face Saving**
+- `Structural_Politeness_and_Politeness_Markers` → **Positive Face Saving**
+- `Tone_and_Overall_Consideration` → **Negative Face Saving**
 
 The corresponding gold target columns used by the OPR experiments are:
 
