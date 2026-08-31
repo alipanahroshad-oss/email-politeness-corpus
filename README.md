@@ -3,20 +3,19 @@
 **Roshad Alipanah, Valentin Barriere, and Jorge Baier**  
 **Findings of the Association for Computational Linguistics: EMNLP 2026**
 
+This repository contains the official implementation accompanying our work on a synthetic request–reply email corpus jointly annotated with **sentence-level Face Acts (FA)** and **document-level politeness**, both grounded in **Brown and Levininson's politeness theory**.
 
-This repository contains the official implementation accompanying our work on a synthetic request–reply email corpus jointly annotated with **sentence-level Face Acts (FA)** and **document-level politeness**, both grounded in **Brown and Levinson's politeness theory**.
-
-The repository provides the complete experimental pipeline, including:
+The repository provides the experimental pipeline, including:
 
 - Synthetic corpus generation from Enron-inspired request–reply scenarios
 - Controlled generation of politeness-graded email variants using GPT-4o
 - Sentence-level Face Act Classification (FAC)
 - Document-level Overall Politeness Regression (OPR)
 - Human annotation files and annotation guidelines
+- Inter-annotator reliability analyses
 - Official train/validation/test splits
 - Validation analyses of the generated corpus
-
-The repository includes all code, datasets, and resources required to reproduce the experiments presented in the paper.
+- Oracle analysis using gold Face Act annotations
 
 ---
 
@@ -31,21 +30,26 @@ The repository includes all code, datasets, and resources required to reproduce 
 │   └── splits/                     # Official train/validation/test splits
 │
 ├── docs/
-│   ├── Face_Act_Annotation_Guidelines.pdf
+│   ├── Face_Acts_Annotation_Guideline.pdf
 │   └── Politeness_Scoring_Annotation_Guidelines.pdf
 │
 ├── src/
 │   ├── generation/                 # Corpus generation and validation
 │   ├── face_act_classification/    # Face Act Classification (FAC)
-│   └── overall_politeness_regression/      # Overall Politeness Regression (OPR)
+│   ├── overall_politeness_regression/
+│   │   └── OPR_one_sentence.py     # Overall Politeness Regression (OPR)
+│   │
+│   ├── reliability/
+│   │   ├── krippendorff_alpha_face_acts.ipynb
+│   │   └── krippendorff_alpha_politeness.ipynb
+│   │
+│   └── ablations/
+│       └── OPR_oracle_goldfa.py
 │
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
 └── .gitignore
-```
-
----
 
 # Repository Overview
 
