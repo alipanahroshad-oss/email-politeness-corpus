@@ -331,9 +331,12 @@ If you use this dataset or code, please cite:
 
 ```bibtex
 @inproceedings{alipanah2026synthetic,
+  author    = {Roshad Alipanah and
+               Valentin Barriere and
+               Jorge A. Baier},
   title     = {A Synthetic Request--Reply Email Corpus Annotated with Document-Level Politeness and Sentence-Level Face Acts},
-  author    = {Alipanah, Roshad and Barriere, Valentin and Baier, Jorge},
   booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  publisher = {Association for Computational Linguistics},
   year      = {2026}
 }
 ```
